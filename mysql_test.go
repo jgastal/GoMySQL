@@ -7,8 +7,8 @@ package mysql
 
 import (
 	"fmt"
+	"math/rand"
 	"os"
-	"rand"
 	"strconv"
 	"sync"
 	"testing"
@@ -54,7 +54,7 @@ const (
 
 var (
 	db        *Client
-	err       os.Error
+	err       error
 	checkOnce sync.Once
 	skipTests bool
 )

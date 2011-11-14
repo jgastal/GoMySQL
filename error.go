@@ -115,21 +115,21 @@ const (
 // Client error struct
 type ClientError struct {
 	Errno Errno
-	Error Error
+	Err Error
 }
 
 // Convert to string
-func (e *ClientError) String() string {
-	return fmt.Sprintf("#%d %s", e.Errno, e.Error)
+func (e *ClientError) Error() string {
+	return fmt.Sprintf("#%d %s", e.Errno, e.Err)
 }
 
 // Server error struct
 type ServerError struct {
 	Errno Errno
-	Error Error
+	Err Error
 }
 
 // Convert to string
-func (e *ServerError) String() string {
-	return fmt.Sprintf("#%d %s", e.Errno, e.Error)
+func (e *ServerError) Error() string {
+	return fmt.Sprintf("#%d %s", e.Errno, e.Err)
 }
